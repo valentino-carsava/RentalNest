@@ -1,0 +1,494 @@
+:root {
+    --primary: #0d6efd;
+    --primary-dark: #0b5ed7;
+    --secondary: #6c757d;
+    --success: #198754;
+    --info: #0dcaf0;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #212529;
+}
+
+/* Custom card styles */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: none;
+    margin-bottom: 24px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Property cards */
+.property-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.property-card .card-body {
+    flex: 1;
+}
+
+.property-image {
+    height: 200px;
+    background-color: #e9ecef;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.property-features {
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.property-features h5 {
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.feature-item i {
+    color: #10b981;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Dashboard styles */
+.dashboard-sidebar {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.dashboard-sidebar .nav-link {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 5px 0;
+    color: #475569;
+    transition: all 0.2s;
+}
+
+.dashboard-sidebar .nav-link:hover {
+    background-color: #f1f5f9;
+    color: #1e40af;
+}
+
+.dashboard-sidebar .nav-link.active {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 500;
+}
+
+/* Search filters */
+.filter-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-results {
+    transition: all 0.3s;
+}
+
+.search-results:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky elements */
+.sticky-top {
+    top: 20px;
+}
+
+/* Badges */
+.badge {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.badge-primary {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.badge-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-secondary {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+/* Hero section */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+    color: white;
+    padding: 60px 0;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* How it works section */
+.how-it-works .card {
+    background-color: white;
+    text-align: center;
+    padding: 30px 20px;
+    height: 100%;
+}
+
+.how-it-works .display-4 {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+    
+    .hero-section .col-md-6 {
+        margin-bottom: 30px;
+    }
+    
+    .property-image {
+        height: 160px;
+    }
+}
+/* Add these fixes to your existing style.css */
+
+/* Fix for background images not showing */
+.property-image-3d {
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    transform: translateZ(30px);
+    transition: transform 0.4s ease;
+    background-color: #e2e8f0; /* Fallback color if image fails to load */
+}
+
+/* Fix the z-index issue with the gradient overlay */
+.property-image-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 70%);
+    z-index: 1;
+}
+
+/* Ensure the content above the image has proper z-index */
+.property-image-3d > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Add image loading indicator */
+.property-image-3d::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    display: none;
+    z-index: 3;
+}
+
+/* Show loading spinner while image loads */
+.property-image-3d.loading::before {
+    display: block;
+}
+
+/* Hide spinner when image is loaded */
+.property-image-3d.loaded::before {
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Ensure cards don't collapse if images fail to load */
+.card-3d {
+    min-height: 420px;
+}
+/* Text Visibility Fixes - ADD THESE TO YOUR style.css */
+.card-header {
+    position: relative;
+    overflow: visible !important;
+}
+
+/* Tab Navigation Fixes */
+.nav-tabs {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.nav-tabs .nav-link {
+    color: white !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1.5rem !important;
+    border: none !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin-bottom: -2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-tabs .nav-link:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.nav-tabs .nav-link.active {
+    background: white !important;
+    color: #4361ee !important;
+    font-weight: 700 !important;
+    border-bottom: 3px solid #4361ee !important;
+}
+
+/* Form Label Fixes */
+.form-label {
+    color: #4a5568 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+/* Form Text Fixes */
+.form-text {
+    color: #4a5568 !important;
+    opacity: 1 !important;
+}
+
+/* Demo Account Text */
+.demo-accounts {
+    color: #1a202c !important;
+    font-weight: 600 !important;
+}
+
+.demo-accounts strong {
+    color: #2d3748 !important;
+}
+
+/* Card Header Text */
+.card-header h3, 
+.card-header p {
+    color: white !important;
+    opacity: 1 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ensure text is visible in all states */
+.text-muted, 
+.text-secondary, 
+.text-gray, 
+.text-light {
+    color: #4a5568 !important;
+    opacity: 1 !important;
+}
+
+/* Explicit rules for login/signup page elements */
+#loginTab .nav-link, 
+#signupTab .nav-link {
+    color: white !important;
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+#loginTab .nav-link.active, 
+#signupTab .nav-link.active {
+    color: #4361ee !important;
+    font-weight: 700 !important;
+}
+
+/* Make sure all form elements have high contrast */
+.form-control, 
+.form-select {
+    color: #1a202c !important;
+}
+
+.form-control::placeholder, 
+.form-select {
+    color: #718096 !important;
+    opacity: 1 !important;
+}
+
+/* Ensure text is visible in alerts */
+.alert .text-muted {
+    color: #1a202c !important;
+}
+
+/* Force high contrast for all text in card body */
+.card-body * {
+    color: #1a202c !important;
+}
+
+.card-body a {
+    color: #4361ee !important;
+    font-weight: 600 !important;
+}
+
+/* Specific fixes for demo account information */
+.demo-info {
+    color: #1a202c !important;
+    font-weight: 600 !important;
+}
+
+.demo-info strong {
+    color: #2b6cb0 !important;
+}
+
+/* Make sure text is visible in form groups */
+.input-group-text {
+    color: #4a5568 !important;
+}
+
+/* Force visibility for all text elements */
+.text-white {
+    color: white !important;
+}
+
+.text-dark {
+    color: #1a202c !important;
+}
+
+/* Ensure text is visible in all contexts */
+* {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Login Tab Specific Fixes */
+.card .nav-tabs {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.card .nav-tabs .nav-link {
+    color: #4a5568 !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1.5rem !important;
+    border: none !important;
+    border-radius: 8px 8px 0 0 !important;
+    margin-bottom: -2px !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+.card .nav-tabs .nav-link:hover {
+    color: #2b6cb0 !important;
+    background-color: rgba(67, 97, 238, 0.08) !important;
+}
+
+.card .nav-tabs .nav-link.active {
+    color: #2b6cb0 !important;
+    background-color: transparent !important;
+    border-bottom: 3px solid #4361ee !important;
+    font-weight: 700 !important;
+}
+
+/* Force text visibility in all states */
+.card .nav-tabs .nav-link,
+.card .nav-tabs .nav-link:hover,
+.card .nav-tabs .nav-link.active {
+    opacity: 1 !important;
+}
